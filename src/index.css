@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-deep: #064e3b;
+  --color-brand-accent: #10b981;
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+}
+
+/* Custom Print Formatting */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  body > *:not(#print-barcode-area) {
+    display: none !important;
+  }
+  #print-barcode-area {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px !important;
+    width: 210mm !important;
+    margin: 0 auto !important;
+    padding: 10mm !important;
+    box-sizing: border-box !important;
+    direction: ltr !important;
+  }
+  .barcode-print-card {
+    border: 1px dashed #bbb !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: white !important;
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+  }
+  .barcode-print-card svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .barcode-print-card .label-text {
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    margin-top: 4px !important;
+    color: black !important;
+    text-align: center !important;
+    direction: rtl !important;
+  }
+}
+
+#print-barcode-area {
+  display: none;
+}

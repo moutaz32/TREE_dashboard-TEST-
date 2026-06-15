@@ -1,0 +1,6 @@
+{
+  "name": "مستودع TREE",
+  "description": "نظام ذكي متكامل لإدارة المخازن والرفوف وتحضير طلبات شوبيفاي لعلامة TREE التجارية مع ربط Supabase.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
